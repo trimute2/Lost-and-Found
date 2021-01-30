@@ -17,7 +17,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         Rig = GetComponent<Rigidbody2D>();
-        distToGround = GetComponent<Collider>().bounds.extents.y;
+        distToGround = GetComponent<Collider2D>().bounds.extents.y;
     }
 
     // Update is called once per frame

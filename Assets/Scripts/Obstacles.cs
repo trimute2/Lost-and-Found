@@ -4,38 +4,22 @@ using UnityEngine;
 
 public class Obstacles : MonoBehaviour
 {
-    public GameObject Black;
-    public GameObject White;
+	public bool White;
 
-    private Transform Blackpos;
-    private Transform Whitepos;
-    private Camera cm;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        cm = GetComponent<Camera>();
-        Blackpos = Black.transform;
-        Whitepos = White.transform;
+		ColorChange.OnColorChangeEvent += OnColorChange;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        var b = Blackpos.position;
-        var w = Whitepos.position;
-        if(cm.backgroundColor == Color.black)
-        {
-            b.y = 50;
-            w.y = 0;
-            Black.transform.position = b;
-            White.transform.position = w;
-        }
-        else
-        {
-            w.y = 50;
-            b.y = 0;
-            White.transform.position = w;
-            Black.transform.position = b;
-        }
-    }
+	private void OnDestroy()
+	{
+		ColorChange.OnColorChangeEvent -= OnColorChange;
+	}
+
+	public void OnColorChange(bool Color)
+	{
+		gameObject.SetActive(Color == White);
+	}
 }
