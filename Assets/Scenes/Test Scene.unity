@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 169120200}
   - component: {fileID: 169120204}
   - component: {fileID: 169120203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e62cdec9fcac54fa3e40331e0f4b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Black: 0
+  White: 1
 --- !u!1 &585377356
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e62cdec9fcac54fa3e40331e0f4b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Black: 1
+  White: 0
 --- !u!1 &1080030910
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1365679241}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 97cd5ed654a26b44ea3f5200ea5e1c17, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
