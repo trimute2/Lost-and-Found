@@ -7,13 +7,18 @@ using UnityEngine.SceneManagement;
 public class LevelExit : MonoBehaviour
 {
 	public string NextLevelName;
-
+	public bool CanOpen = true;
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if(collision.GetComponent<Character>() != null)
+		if(CanOpen && collision.GetComponent<Character>() != null)
 		{
 			SceneManager.LoadScene(NextLevelName);
 		}
+	}
+
+	public void SetOpen(bool newOpen)
+	{
+		CanOpen = newOpen;
 	}
 
 }
