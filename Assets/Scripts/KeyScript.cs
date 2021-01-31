@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class KeyScript : MonoBehaviour
 {
+
 	public UnityEvent OnKeyPickUp;
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
