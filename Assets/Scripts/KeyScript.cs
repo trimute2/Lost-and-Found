@@ -12,6 +12,12 @@ public class KeyScript : MonoBehaviour
 		if (collision.GetComponent<Character>() != null)
 		{
 			OnKeyPickUp.Invoke();
+			DestroyKey();
 		}
+	}
+
+	public void DestroyKey()
+	{
+		Destroy(gameObject);
 	}
 }
