@@ -74,6 +74,22 @@ public class Character : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name.Equals("Platform1") || collision.gameObject.name.Equals("Platform2"))
+        {
+            this.transform.parent = collision.transform;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Equals("Platform1") || collision.gameObject.name.Equals("Platform2"))
+        {
+            this.transform.parent = null;
+        }
+    }
 }
 
    

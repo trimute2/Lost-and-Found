@@ -11,6 +11,8 @@ public class MovingPlatform : MonoBehaviour
     private Vector3 EndPosition;
     private bool OnTheMove;
 
+    public Collision2D collision;
+    
     // Use this for initialization
     void Start()
     {
@@ -18,6 +20,7 @@ public class MovingPlatform : MonoBehaviour
         StartPosition = this.transform.position;
         EndPosition = MovePosition.position;
     }
+
 
     void FixedUpdate()
     {
@@ -36,6 +39,7 @@ public class MovingPlatform : MonoBehaviour
         if (this.transform.position.x == EndPosition.x && this.transform.position.y == EndPosition.y && OnTheMove == false)
         {
             OnTheMove = true;
+           
         }
         else if (this.transform.position.x == StartPosition.x && this.transform.position.y == StartPosition.y && OnTheMove == true)
         {
