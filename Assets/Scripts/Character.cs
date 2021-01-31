@@ -9,9 +9,12 @@ public class Character : MonoBehaviour
 
     public Transform MovePosition;
 
+    public Animator playerAnimator;
+
     private Rigidbody2D Rig;
     private float horizontal;
     private float distToGround;
+    private bool faceRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +28,17 @@ public class Character : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         Rig.velocity = new Vector3(speed * horizontal, Rig.velocity.y);
-
+        //updates player Animation based on speed
+        playerAnimator.SetFloat("Speed", Mathf.Abs(speed * horizontal));
+        Move(horizontal);//move method to change animation
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             Rig.AddForce(Vector3.up * upspeed, ForceMode2D.Impulse);
+            playerAnimator.SetBool("isJumping", true);
+        }
+        else if (IsGrounded())
+        {
+            playerAnimator.SetBool("isJumping", false);//when grounded stop jumping
         }
     }
 
@@ -36,4 +46,32 @@ public class Character : MonoBehaviour
     {
         return Physics2D.Raycast(transform.position, -Vector2.up, 2f, LayerMask.GetMask("Ground"));
     }
+
+    //checking horizontal 
+    private void Move(float horizontal)
+    {
+        if (horizontal > 0 && !faceRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+        else if (horizontal < 0 && faceRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+
+    }
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        faceRight = !faceRight;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 }
+
+   
