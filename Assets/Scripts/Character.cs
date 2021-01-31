@@ -22,9 +22,18 @@ public class Character : MonoBehaviour
         Rig = GetComponent<Rigidbody2D>();
         distToGround = GetComponent<Collider2D>().bounds.extents.y;
     }
+	void Awake()
+	{
+		ColorChange.OnColorChangeEvent += unparrent;
+	}
 
-    // Update is called once per frame
-    void Update()
+	private void OnDestroy()
+	{
+		ColorChange.OnColorChangeEvent -= unparrent;
+	}
+
+	// Update is called once per frame
+	void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
         Rig.velocity = new Vector3(speed * horizontal, Rig.velocity.y);
@@ -75,6 +84,11 @@ public class Character : MonoBehaviour
         transform.localScale = theScale;
     }
 
+	public void unparrent(bool t)
+	{
+		this.transform.parent = null;
+	}
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.name.Equals("Platform1") || collision.gameObject.name.Equals("Platform2"))
@@ -87,7 +101,10 @@ public class Character : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("Platform1") || collision.gameObject.name.Equals("Platform2"))
         {
-            this.transform.parent = null;
+			if (collision.collider.gameObject.activeSelf)
+			{
+				this.transform.parent = null;
+			}
         }
     }
 }
