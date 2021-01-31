@@ -6,14 +6,14 @@ public class MainMenu : MonoBehaviour
 {
     //Main Menu
 
-    const int numOfLevels = 5;
+    const int numOfLevels = 6;
     public void PlayGame()
     {
         if (SceneManager.GetActiveScene().buildIndex <= (numOfLevels-1))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        else
+        if (SceneManager.GetActiveScene().buildIndex == 7)
         {
             //go back to main menu if no screens left
             SceneManager.LoadScene(0);
