@@ -1265,7 +1265,12 @@ PrefabInstance:
     - target: {fileID: 3391738677286206304, guid: 73f25493150bbb74493978e70803b395,
         type: 3}
       propertyPath: NextLevelName
-      value: Level8
+      value: MainScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391738677286206304, guid: 73f25493150bbb74493978e70803b395,
+        type: 3}
+      propertyPath: CanOpen
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3391738677286206306, guid: 73f25493150bbb74493978e70803b395,
         type: 3}
@@ -2446,7 +2451,7 @@ PrefabInstance:
     - target: {fileID: 3391738677286206304, guid: 2f224066a85308540a565d951e559e48,
         type: 3}
       propertyPath: NextLevelName
-      value: Level8
+      value: MainScreen
       objectReference: {fileID: 0}
     - target: {fileID: 3391738677286206306, guid: 2f224066a85308540a565d951e559e48,
         type: 3}

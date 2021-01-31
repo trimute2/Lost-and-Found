@@ -46,7 +46,7 @@ public class Character : MonoBehaviour
 
     bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, -Vector2.up, 2f, LayerMask.GetMask("Ground"));
+        return Physics2D.Raycast(transform.position, -Vector2.up, 1.5f, LayerMask.GetMask("Ground"));
     }
 
     //checking horizontal 
