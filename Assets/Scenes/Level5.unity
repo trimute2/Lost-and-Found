@@ -441,6 +441,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9b8e38df3f4cf34790f0042686f72c8, type: 3}
+--- !u!114 &779237673 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3391738677286206304, guid: 2f224066a85308540a565d951e559e48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1040296035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee12c25488c6a77429b98ce076923baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &837956445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -611,6 +623,11 @@ PrefabInstance:
       propertyPath: NextLevelName
       value: Level6
       objectReference: {fileID: 0}
+    - target: {fileID: 3391738677286206304, guid: 2f224066a85308540a565d951e559e48,
+        type: 3}
+      propertyPath: CanOpen
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3391738677286206306, guid: 2f224066a85308540a565d951e559e48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -673,6 +690,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f224066a85308540a565d951e559e48, type: 3}
+--- !u!1 &1063732471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3610560758495391792, guid: d3f129ae1da0b7a4eb74d2e8e93b696a,
+    type: 3}
+  m_PrefabInstance: {fileID: 749198115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1063732472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063732471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ccc5e9b67715b41bbce0359c23ced6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnKeyPickUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 779237673}
+        m_MethodName: SetOpen
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1071064176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: whiteobstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 177314699770031347, guid: a9f4ec200d2ec53448c65e3c43795b56,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 177314699770031350, guid: a9f4ec200d2ec53448c65e3c43795b56,
         type: 3}
