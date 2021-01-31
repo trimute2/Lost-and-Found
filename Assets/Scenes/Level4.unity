@@ -406,6 +406,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3f129ae1da0b7a4eb74d2e8e93b696a, type: 3}
+--- !u!1 &943225934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3610560758495391792, guid: d3f129ae1da0b7a4eb74d2e8e93b696a,
+    type: 3}
+  m_PrefabInstance: {fileID: 749198115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &943225935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943225934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ccc5e9b67715b41bbce0359c23ced6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnKeyPickUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1690412975}
+        m_MethodName: SetOpen
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &1024234109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,6 +533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: NextLevelName
       value: Level5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391738677286206304, guid: 2f224066a85308540a565d951e559e48,
+        type: 3}
+      propertyPath: CanOpen
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3391738677286206306, guid: 2f224066a85308540a565d951e559e48,
         type: 3}
@@ -774,7 +811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071064176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.399, y: 1.123, z: 0}
+  m_LocalPosition: {x: -11.04, y: 1.123, z: 0}
   m_LocalScale: {x: 0.061923165, y: 2.3008945, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -834,7 +871,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 9.864222
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1316,6 +1353,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1690412975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3391738677286206304, guid: 2f224066a85308540a565d951e559e48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1040296035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee12c25488c6a77429b98ce076923baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1776163418
 GameObject:
   m_ObjectHideFlags: 0

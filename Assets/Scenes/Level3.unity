@@ -1229,6 +1229,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3f129ae1da0b7a4eb74d2e8e93b696a, type: 3}
+--- !u!1 &749198116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3610560758495391792, guid: d3f129ae1da0b7a4eb74d2e8e93b696a,
+    type: 3}
+  m_PrefabInstance: {fileID: 749198115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &749198117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749198116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ccc5e9b67715b41bbce0359c23ced6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnKeyPickUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1040296036}
+        m_MethodName: SetOpen
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &930811034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1471,6 +1503,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f224066a85308540a565d951e559e48, type: 3}
+--- !u!114 &1040296036 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3391738677286206304, guid: 2f224066a85308540a565d951e559e48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1040296035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee12c25488c6a77429b98ce076923baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1062725038
 PrefabInstance:
   m_ObjectHideFlags: 0
