@@ -39,6 +39,8 @@ public class Character : MonoBehaviour
         else if (IsGrounded())
         {
             playerAnimator.SetBool("isJumping", false);//when grounded stop jumping
+            playerAnimator.SetBool("isGrounded", true);//when grounded stop jumping
+
         }
     }
 
